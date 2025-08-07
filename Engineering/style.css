@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  background: #f1f1f1;
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  text-align: center;
+  position: relative;
+}
+
+.text h1 {
+  font-size: 80px;
+  color: #37474f;
+  margin-bottom: 10px;
+}
+.text p {
+  font-size: 20px;
+  color: #607d8b;
+}
+.text a {
+  margin-top: 20px;
+  display: inline-block;
+  background: #0277bd;
+  color: white;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+.text a:hover {
+  background: #01579b;
+}
+
+/* Gear Design */
+.gears {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  gap: 20px;
+}
+
+.gear {
+  width: 60px;
+  height: 60px;
+  background: #90a4ae;
+  border-radius: 50%;
+  position: relative;
+  animation: spin 4s linear infinite;
+}
+.gear::before,
+.gear::after {
+  content: '';
+  position: absolute;
+  background: #90a4ae;
+}
+.gear::before {
+  width: 10px;
+  height: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.gear::after {
+  width: 60px;
+  height: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.gear1 {
+  animation-duration: 4s;
+}
+.gear2 {
+  animation-direction: reverse;
+  animation-duration: 5s;
+}
+.gear3 {
+  animation-duration: 6s;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

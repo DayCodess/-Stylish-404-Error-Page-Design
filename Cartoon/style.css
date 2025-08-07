@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(135deg, #fceabb, #f8b500);
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  text-align: center;
+}
+
+h1 {
+  font-size: 100px;
+  color: #d32f2f;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 22px;
+  color: #444;
+  margin-bottom: 40px;
+}
+
+.cartoon-character {
+  position: relative;
+  width: 150px;
+  height: 250px;
+  margin: 0 auto 30px;
+  animation: bounce 2s infinite;
+}
+
+/* Head */
+.head {
+  width: 120px;
+  height: 120px;
+  background: #fff;
+  border: 4px solid #000;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.eye {
+  width: 20px;
+  height: 20px;
+  background: #000;
+  border-radius: 50%;
+  position: absolute;
+  top: 35px;
+}
+
+.left {
+  left: 25px;
+}
+
+.right {
+  right: 25px;
+}
+
+.smile {
+  width: 40px;
+  height: 20px;
+  border-bottom: 4px solid #000;
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 0 0 20px 20px;
+}
+
+/* Body */
+.body {
+  width: 80px;
+  height: 100px;
+  background: #4caf50;
+  position: absolute;
+  top: 110px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 20px;
+  border: 4px solid #000;
+}
+
+/* Arms */
+.arm {
+  width: 20px;
+  height: 60px;
+  background: #4caf50;
+  position: absolute;
+  top: 120px;
+  border-radius: 10px;
+  border: 4px solid #000;
+}
+
+.left-arm {
+  left: -20px;
+  transform: rotate(-20deg);
+}
+
+.right-arm {
+  right: -20px;
+  transform: rotate(20deg);
+}
+
+/* Legs */
+.leg {
+  width: 20px;
+  height: 60px;
+  background: #4caf50;
+  position: absolute;
+  bottom: 0;
+  border-radius: 10px;
+  border: 4px solid #000;
+}
+
+.left-leg {
+  left: 30px;
+}
+
+.right-leg {
+  right: 30px;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.btn {
+  padding: 12px 25px;
+  background: #ff5722;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 20px;
+  font-weight: bold;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #e64a19;
+}

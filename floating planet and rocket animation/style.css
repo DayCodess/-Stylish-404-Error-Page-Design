@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+  font-family: 'Segoe UI', sans-serif;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.space {
+  text-align: center;
+  position: relative;
+}
+
+.planet {
+  width: 120px;
+  height: 120px;
+  background: radial-gradient(circle at 30% 30%, #e0c3fc, #8ec5fc);
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: float 4s ease-in-out infinite;
+  box-shadow: 0 0 20px #8ec5fc;
+}
+
+.rocket img {
+  width: 80px;
+  position: absolute;
+  top: 150px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-45deg);
+  animation: fly 6s infinite linear;
+}
+
+.message {
+  margin-top: 300px;
+  animation: fadeIn 2s ease-in-out;
+}
+
+h1 {
+  font-size: 6rem;
+  color: #ff6f91;
+  text-shadow: 0 0 20px #ff6f91;
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 1rem;
+  margin-bottom: 30px;
+}
+
+.btn {
+  padding: 12px 28px;
+  background: #ff6f91;
+  color: white;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 0 12px #ff6f91;
+  animation: bounce 2s infinite;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #ff3b61;
+  box-shadow: 0 0 20px #ff3b61;
+}
+
+/* Animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    transform: translateX(-50%) translateY(-20px);
+  }
+}
+
+@keyframes fly {
+  0% {
+    transform: translateX(-50%) translateY(0) rotate(-45deg);
+  }
+  100% {
+    transform: translateX(-50%) translateY(-800px) rotate(-45deg);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  h1 {
+    font-size: 4rem;
+  }
+
+  .rocket img {
+    width: 60px;
+    top: 120px;
+  }
+
+  .planet {
+    width: 90px;
+    height: 90px;
+  }
+}

@@ -1,0 +1,86 @@
+body {
+  margin: 0;
+  background: #333;
+  font-family: 'Arial', sans-serif;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+
+.road-container {
+  text-align: center;
+  position: relative;
+}
+
+.car {
+  position: relative;
+  width: 150px;
+  margin: 0 auto 20px;
+  animation: moveCar 3s infinite ease-in-out;
+}
+
+.body {
+  width: 150px;
+  height: 60px;
+  background: red;
+  border-radius: 10px;
+}
+
+.wheel {
+  width: 30px;
+  height: 30px;
+  background: black;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -15px;
+}
+
+.front {
+  left: 20px;
+}
+
+.back {
+  right: 20px;
+}
+
+.smoke {
+  width: 20px;
+  height: 20px;
+  background: #aaa;
+  border-radius: 50%;
+  position: absolute;
+  left: -10px;
+  top: -10px;
+  animation: smoke 2s infinite;
+}
+
+@keyframes smoke {
+  0% { transform: translateY(0) scale(1); opacity: 1; }
+  100% { transform: translateY(-30px) scale(1.5); opacity: 0; }
+}
+
+@keyframes moveCar {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(10px); }
+}
+
+h1 {
+  font-size: 60px;
+  margin: 0;
+}
+
+p {
+  font-size: 18px;
+  margin: 10px 0 20px;
+}
+
+a {
+  background: #ff9800;
+  color: #fff;
+  padding: 10px 25px;
+  text-decoration: none;
+  border-radius: 5px;
+}
